@@ -215,7 +215,9 @@ dependencies {
   }
 }
 
-mainClassName = 'uk.gov.hmcts.labs.tmckillop95.Application'
+application {
+    mainClass = 'uk.gov.hmcts.labs.tmckillop95.Application'
+}
 
 bootJar {
   getArchiveFileName().set(provider {
