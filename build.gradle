@@ -152,9 +152,15 @@ dependencyCheck {
   failBuildOnCVSS = 0
   suppressionFile = 'config/owasp/suppressions.xml'
 
+  nvd {
+    apiKey = System.getenv("NVD_API_KEY")
+  }
+ 
   analyzers {
     // Disable scanning of .NET related binaries
     assemblyEnabled = false
+    // OSS Index rate limits anonymous requests from CI runners
+    ossIndexEnabled = false
   }
 
     skipConfigurations = [
