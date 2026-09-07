@@ -27,6 +27,6 @@ public class RootController {
     @RequestMapping(value = "/", method = GET, produces = TEXT_PLAIN_VALUE)
 
     public ResponseEntity<String> welcome() {
-        return ok("Welcome to labs-tmckillop95 application, my favourite fruit is " +  System.getenv("FAVOURITE_FRUIT"));
+        return ok("Welcome to labs-tmckillop95 application, my favourite fruit is " + System.getenv("FAVOURITE_FRUIT"));
     }
 }
